@@ -1,0 +1,13 @@
+%{
+int frequency=0;
+%}
+%%
+[a-zA-Z] {frequency++;}
+%%
+int yywrap(void){}
+int main(){
+printf("enter the word: \n");
+yylex();
+printf("frequency of words=%d",frequency);
+return 0;
+}
